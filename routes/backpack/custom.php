@@ -19,9 +19,8 @@ Route::group([
     Route::crud('school', 'SchoolCrudController');
     Route::crud('sclass', 'SclassCrudController');
     Route::crud('student', 'StudentCrudController');
-    Route::group([], function (){
-        Route::crud('school/{school_id}', 'SclassCrudController');
-        Route::crud('sclass/{class_id}', 'StudentCrudController');
-    });
+    Route::crud('school/{school_id}', 'SclassCrudController');
+    Route::crud('school/{school_id}/sclass/{class_id}', 'SclassCrudController');
+    Route::crud('sclass/{class_id}', 'StudentCrudController');
 });
 // this should be the absolute last line of this file

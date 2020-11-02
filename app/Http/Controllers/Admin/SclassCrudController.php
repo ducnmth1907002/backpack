@@ -57,13 +57,28 @@ class SclassCrudController extends CrudController
             'label'     => '#',
             'orderable' => false,
         ])->makeFirstColumn();
+
+        $this->crud->addColumn([
+            'name' => 'school_id',
+            'type' => 'select',
+            'label' => 'School Name',
+            'entity'    => 'School', // the method that defines the relationship in your Model
+            'attribute' => 'name', // foreign key attribute that is shown to user
+            'model'     => "App\Models\School", // foreign key model
+            'wrapper'   => [
+                'href' => function ($crud, $column, $entry, $related_key) {
+                    return backpack_url('/school/'.$related_key);
+                },
+            ]
+        ]);
+
         $this->crud->addColumn([
             'name' => 'name',
             'type' => 'text',
             'label' => 'Name',
             'wrapper'   => [
                 'href' => function ($crud, $column, $entry, $related_key) {
-                    return backpack_url('sclass/'.$entry->id);
+                    return backpack_url('/school/'.$entry->school_id.'/sclass/'.$entry->id);
                 },
             ]
         ]);
@@ -89,6 +104,7 @@ class SclassCrudController extends CrudController
             }
         ]);
 
+        $this->addCustomCrudFilters();
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
@@ -106,7 +122,14 @@ class SclassCrudController extends CrudController
     protected function setupCreateOperation()
     {
         $this->crud->addField(['name' => 'name', 'type' => 'text', 'label' => 'Name']);
-        $this->crud->addField(['name' => 'school_id', 'type' => 'number', 'label' => 'School Name']);
+        $this->crud->addField([
+            'name' => 'school_id',
+            'type' => 'select',
+            'label' => 'School Name',
+            'entity'    => 'School', // the method that defines the relationship in your Model
+            'attribute' => 'name', // foreign key attribute that is shown to user
+            'model'     => "App\Models\School", // foreign key model
+        ]);
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:
@@ -124,5 +147,32 @@ class SclassCrudController extends CrudController
     protected function setupUpdateOperation()
     {
         $this->setupCreateOperation();
+    }
+
+    protected function addCustomCrudFilters(){
+        $this->crud->addFilter(
+            [
+                'name' => 'school_id',
+                'type' => 'select2',
+                'label' => 'School'
+            ],
+            function () {
+                $schools = School::all();
+                $shoolList = [];
+                $schools->each(function ($s) use (&$shoolList) {
+                    $shoolList[$s->id] = $s->name;
+                });
+
+                return $shoolList;
+
+            },
+            function ($value) {
+//                dd($value);
+                $this->crud->addClause('where', 'school_id', $value);
+            }
+        );
+
+
+
     }
 }

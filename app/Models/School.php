@@ -38,6 +38,11 @@ class School extends Model
     public function sclasses(){
         return $this->hasMany(Sclass::class , 'school_id', 'id');
     }
+
+    public function students()
+    {
+        return $this->hasManyThrough(Student::class, Sclass::class, 'school_id', 'class_id', 'id');
+    }
     /*
     |--------------------------------------------------------------------------
     | SCOPES

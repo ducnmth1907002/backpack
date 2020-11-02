@@ -69,6 +69,14 @@ class SchoolCrudController extends CrudController
                 return $entry->sclasses()->count() . ' class';
             }
         ]);
+        $this->crud->addColumn([
+            'name' => 'student_count',
+            'label' => 'Students',
+            'type' => 'closure',
+            'function' => function($entry) {
+                return $entry->students()->count().' students';
+            }
+        ]);
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:

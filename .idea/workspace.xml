@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ce0352c1-5c3a-4039-a6b5-3735c2aa2848" name="Default Changelist" comment="" />
+    <list default="true" id="ce0352c1-5c3a-4039-a6b5-3735c2aa2848" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/SchoolCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SchoolCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/SclassCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SclassCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/School.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/School.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/backpack/custom.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/backpack/custom.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -129,6 +138,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1jZwXdqFRdnnGKP5VF2F2QB84ZU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -136,7 +146,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/backpack-laravel" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -154,7 +164,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604024962501</updated>
-      <workItem from="1604024963570" duration="22721000" />
+      <workItem from="1604024963570" duration="23147000" />
+      <workItem from="1604279292280" duration="2751000" />
     </task>
     <servers />
   </component>
@@ -166,6 +177,10 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="729" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1604030668296" />
+    <state x="767" y="297" width="447" height="520" key="FileChooserDialogImpl" timestamp="1604279336262">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="767" y="297" width="447" height="520" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1604279336262" />
     <state x="659" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1604025683573">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
